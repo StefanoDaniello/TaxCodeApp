@@ -82,7 +82,7 @@ button:hover {
 }
 
 #cardresult {
-    display: block;
+    display: none;
 }
   /* Styles for the card */
   .card {
