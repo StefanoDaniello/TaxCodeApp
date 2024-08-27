@@ -61,6 +61,8 @@ async function fetchTaxCode(event) {
   }
 };
 
+
+// Esso aspetta che il DOM e completamente caricato ed e pronto per essere manipolato.
 document.addEventListener("DOMContentLoaded", function() {
     const closeCard = document.getElementById("close-card");
     closeCard.addEventListener("click", function() {
