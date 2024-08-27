@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo Codice Fiscale</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+   
+</head>
+<body>
+    <form class="taxcodeform" onsubmit="fetchTaxCode(event)">
+        <div class="d-flex">
+            <div>
+                <h3>Cognome</h3>
+                <input type="text" id="surname" placeholder="Inserisci il cognome" required>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="name">
+                <h3>Nome</h3>
+                <input type="text" id="name" placeholder="Inserisci il nome" required>    
+            </div>
+            <div class="gender">
+                <h3>Sesso</h3>
+                <input type="text" id="gender" placeholder="M/F" required>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div>
+                <h3>Luogo di nascita</h3>
+                <input type="text" id="city" placeholder="Es. Roma" required>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div>
+                <h3>Provincia (Sigla)</h3>
+                <input type="text" id="state" placeholder="Es. RM" required>
+            </div>
+            <div>
+                <h3>Data di nascita</h3>
+                <div class="d-flex">
+                    <input type="text" id="day" placeholder="GG" maxlength="2" style="flex: 1; margin-right: 5px;" required>
+                    <input type="text" id="month" placeholder="MM" maxlength="2" style="flex: 1; margin-right: 5px;" required>
+                    <input type="text" id="year" placeholder="AAAA" maxlength="4" style="flex: 2;" required>
+                </div>
+            </div>
+        </div>
+        <button type="submit">Calcola</button>
+    </form>
+
+
+    <div id="cardresult" class="card">
+        <h2>Risultato Codice Fiscale</h2>
+        <div id="taxcode" class="code-box">---</div>
+        <p><strong>Cognome:</strong> <span id="display-surname" class="uppercase">---</span></p>
+        <p><strong>Nome:</strong> <span id="display-name" class="uppercase">---</span></p>
+        <p><strong>Sesso:</strong> <span id="display-gender" class="uppercase">---</span></p>
+        <p><strong>Luogo di nascita:</strong> <span id="display-city" class="uppercase">---</span></p>
+        <p><strong>Provincia:</strong> <span id="display-state" class="uppercase">---</span></p>
+        <p><strong>Data di nascita:</strong> <span id="display-birthdate" class="uppercase">---</span></p>
+        <button id="close-card">Cerca un altro codice</button>
+    </div>
+   
+
+
+</body>
+</html>
